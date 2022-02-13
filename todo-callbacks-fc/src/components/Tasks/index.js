@@ -1,9 +1,15 @@
+import Task from "../Tasks/Task"
 
-function Tasks() {
+function Tasks(props) {
+  const {propTasks} = props
+
   return (
-    <div className="tasks">
-      <p> a casa pete</p>
-    </div>
+    <ul className="task-list">
+
+     {propTasks.map((task,key) => {
+      return <Task key={key} name={task} />
+    })}
+    </ul>
   );
 }
 

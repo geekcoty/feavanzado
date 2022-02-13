@@ -3,16 +3,17 @@ import Tasks from "./components/Tasks"
 import {useState} from "react"
 
 function App() {
-  const [tasks, setTasks] = useState([])
+  const [taskList, setTaskList] = useState([])
+
   function handleCallback(inputValue){
-    const newTasks =[...tasks, inputValue]
-    setTasks(newTasks)
+    const newTasks =[...taskList, inputValue]
+    setTaskList(newTasks)
   }
 
   return (
     <>
     <AddTask propCallback={(inputValue) => handleCallback (inputValue)} />
-    <Tasks  propTasks={tasks}/>
+    <Tasks  propTasks={taskList}/>
     </>
   );
 }

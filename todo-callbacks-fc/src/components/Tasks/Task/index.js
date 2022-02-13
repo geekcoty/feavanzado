@@ -1,10 +1,7 @@
-
-import Task from "../Task"
-
-function Task() {
+function Task(props) {
   return (
     <>
-      <Task />
+  <li> {props.name}</li> 
     </>
   );
 }
