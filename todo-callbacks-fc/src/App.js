@@ -6,9 +6,12 @@ function App() {
   const [taskList, setTaskList] = useState([])
 
   function handleCallback(inputValue){
-    const newTasks =[...taskList, inputValue]
-    setTaskList(newTasks)
-  }
+    setTaskList([...taskList,
+      {
+        value: inputValue,
+        isCompleted:false
+  }])
+}
 
   return (
     <>
