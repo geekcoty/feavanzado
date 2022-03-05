@@ -1,9 +1,18 @@
 import Task from "./Task"
 import {useState} from "react"
 
-function Tasks () {
+function Tasks (props) {
   const [inputValue, setInputValue] = useState([])
   const [tasks, setTasks] = useState([])
+
+  //recibo el callback del componente hijo (Task)
+  function handleCallback(name) {
+    const {handleCallback} = props
+    console.log(name)
+    
+    handleCallback(name)
+
+  }
 
   function handleChange(e){
 
@@ -29,12 +38,15 @@ function Tasks () {
 
    <button onClick={handleClick}> Add task </button>
 
-   {/*mapeamos las tasks*/}
+   {/*mapeamos las tasks
    <ul className="taskContainer">
     {tasks.map((name,key)=> {
-      return <Task name={name} key={key}/>;
+      return <Task 
+      handleCallback={handleCallback} 
+      isCompleted={name.isCompleted} name={name} key={key}/>;
     })}
    </ul>
+  */}
 
    </>
   );
