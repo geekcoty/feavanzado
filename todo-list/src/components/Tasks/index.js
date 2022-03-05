@@ -1,55 +1,26 @@
-import Task from "./Task"
-import {useState} from "react"
+import React from "react";
+import Task from "../Task"
 
-function Tasks (props) {
-  const [inputValue, setInputValue] = useState([])
-  const [tasks, setTasks] = useState([])
-
-  //recibo el callback del componente hijo (Task)
+function Tasks(props) {
   function handleCallback(name) {
-    const {handleCallback} = props
-    console.log(name)
-    
-    handleCallback(name)
-
+    console.log("Padre", name);
+    props.handleCallback(name); // Lo paso de Tasks a App
   }
 
-  function handleChange(e){
-
-    //tomamos el valor del input
-    const {value} = e.target
-
-    setInputValue(value)
-  }
-
- function handleClick(){
-
-  //usamos el spread operator para copiar el array task, agregar el valor nuevo y despues reseteamos el input.
-  if (inputValue != "") {
-  setTasks([...tasks, inputValue]);
-  setInputValue("");
-  } 
-
-
- }
- return (
-   <>
-   <input name="task-input" type="text" value={inputValue} onChange={handleChange} />
-
-   <button onClick={handleClick}> Add task </button>
-
-   {/*mapeamos las tasks
-   <ul className="taskContainer">
-    {tasks.map((name,key)=> {
-      return <Task 
-      handleCallback={handleCallback} 
-      isCompleted={name.isCompleted} name={name} key={key}/>;
-    })}
-   </ul>
-  */}
-
-   </>
+  return (
+    <ul>
+      {props.tasks.map((task, key) => {
+        return (
+          <Task
+            handleCallback={handleCallback}
+            name={task.value}
+            isCompleted={task.isCompleted}
+            key={key}
+          />
+        );
+      })}
+    </ul>
   );
 }
 
-export default Tasks
+export default Tasks;
