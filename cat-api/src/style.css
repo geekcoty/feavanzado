@@ -1,0 +1,6 @@
+.App .CatPic{
+  position: relative;
+  left: 15%;
+   max-width: 70%;
+  background-color: rgb(157, 76, 211);
+}
