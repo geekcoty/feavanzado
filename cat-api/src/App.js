@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.scss"
 import {useEffect, useState} from "react";
 
 function App() {
@@ -22,7 +22,9 @@ const [gato, setGato] = useState ( "" )
 
   return (
     <div className="App">
-      <img src={ gato } />
+      <div className="CatPic">
+        <img src={ gato } className="Cat"/>
+      </div>
     </div>
   );
 }
