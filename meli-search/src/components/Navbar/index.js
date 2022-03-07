@@ -1,19 +1,16 @@
-import {useState} from "react"
-
-
 function Navbar(props) {
-  const [inputValue, setInputValue] = useState ("")
-
   function handleChange(e) {
     const {value} = e.target;
-    setInputValue(value);
-    props.propCallback(inputValue)
+    const {propCallback} =props;
+    
+    propCallback(value)
+   
   }
   return (
     <>
     <input type="text" 
     onChange={handleChange}
-        value={inputValue} />
+  />
     </>
   );
 }

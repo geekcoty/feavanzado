@@ -2,8 +2,9 @@ import Item from "../List/Item"
 
 import {useEffect, useState} from "react";
 
-function List() {
+function List(props) {
    const [items, setItems] = useState([])
+
 
   useEffect(() => {
     fetchItems();
@@ -11,7 +12,7 @@ function List() {
   },[])
 
   async function fetchItems() {
-      const dataItems = await fetch ("https://api.mercadolibre.com/sites/MLA/search?q=tablets&limit=10")
+      const dataItems = await fetch ("https://api.mercadolibre.com/sites/MLA/search?q=auriculares")
       const itemsJson = await dataItems.json(); 
 
       setItems(itemsJson.results)
@@ -21,11 +22,15 @@ function List() {
   
     //para mostrar los resultados lo hacemos con un map
     //pasamos por props data=item para mostrar la img y el title en el comp Item
+    //hacemos un filter y el rdo de ese filter (un array), lo mapeamos
   return (
     <>
-   {items.map(( item ,key ) => {
-     return <Item data={item} key={item.id ? item.id : key}/>
-   })}
+
+    {items.filter((item) =>{
+      return item.title.toLowerCase().includes(props.searchParam.toLowerCase());
+    })
+    .map((item, key)=> {return <Item data={item} key={item.id ? item.id : key}/>
+  })}
     </>
   );
 }

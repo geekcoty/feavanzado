@@ -1,0 +1,3 @@
+items.map(( item ,key ) => {
+     return <Item data={item} key={item.id ? item.id : key}/>
+   })
