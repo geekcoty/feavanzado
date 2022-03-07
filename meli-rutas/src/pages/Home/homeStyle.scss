@@ -1,0 +1,13 @@
+.home-container{
+  display: flex;
+  background-color: #FFE600;
+  justify-content: center;
+  align-items:center;
+  margin: 2rem;
+  .link-div{
+    .link{
+      color:#2d3277;
+      text-decoration: none;
+    }
+  }
+}

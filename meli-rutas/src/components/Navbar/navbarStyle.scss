@@ -1,0 +1,26 @@
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFE600;
+  padding: 0.5rem;
+  .nav-img-div{
+    .nav-img{
+      margin-right: 1rem;
+    }
+  }
+  .nav-input-div{
+    background-color: white;
+    width:45rem;
+    .nav-input{
+      background-color:white;
+      border: 0px;
+      width: 40rem;
+      height: 2.14rem;
+    }
+    .nav-button{
+      padding-left: 2rem;
+      color:grey;
+    }
+  }
+}
