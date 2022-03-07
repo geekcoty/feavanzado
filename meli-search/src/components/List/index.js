@@ -12,7 +12,7 @@ function List(props) {
   },[])
 
   async function fetchItems() {
-      const dataItems = await fetch ("https://api.mercadolibre.com/sites/MLA/search?q=auriculares")
+      const dataItems = await fetch ("https://api.mercadolibre.com/sites/MLA/search?q=tablets")
       const itemsJson = await dataItems.json(); 
 
       setItems(itemsJson.results)
