@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import {BrowserRouter as Router,Route} from "react-router-dom";
+
 import Home from "./pages/Home"
 import Search from "./pages/Search"
+import Team from "./pages/Team"
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Router>
     <Route exact path="/" component={Home} />
-     <Route exact path="/search" component={Search} />
+    <Route exact path="/search/:site" component={Search} />
+    <Route exact path="/team/:id" component={Team} />
 
   </Router>,
   document.getElementById('root')

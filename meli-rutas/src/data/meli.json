@@ -1,0 +1,15 @@
+[{
+  "site" : "MLA",
+  "flag":"https://i.postimg.cc/hv4rnbhN/argentina-flag-icon-16.png",
+  "name": "Argentina"
+},
+{
+  "site": "MLB",
+  "flag": "https://i.postimg.cc/Qtp82QZc/brazil-flag-icon-16.png",
+  "name": "Brasil"
+},
+{
+  "site": "MLC",
+  "flag": "https://i.postimg.cc/j5bcgrTx/chile-flag-icon-16.png",
+  "name": "Chile"
+}]

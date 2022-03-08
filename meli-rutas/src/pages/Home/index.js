@@ -1,19 +1,32 @@
-import logo from "../../assets/meli.jpeg"
-import "../Home/homeStyle.scss"
-import FlagIconFactory from 'react-flag-icon-css'
+import logo from '../../assets/meli.jpeg';
+
+import "./homeStyle.scss";
+
+import sites from '../../data/meli.json';
+
+import { Link } from 'react-router-dom';
+
 function Home() {
-  return (
-    <div className="home-container">
-      <div className="logo-div">
-        <img src={logo} alt="meli logo" className="logo" />
-      </div>
-      <div className="link-div">
-       <p><a href="/search" className="link"> <span className="flag-icon flag-icon-ar"></span> Argentina</a></p>
-      <p><a href="/search" className="link"> <span className="flag-icon flag-icon-cl"></span> Chile</a></p>
-    <p><a href="/search" className="link"> <span className="flag-icon flag-icon-uy"></span> Uruguay </a></p>
-      </div>
-    </div>
-  );
+	return (
+		<div className="home-container">
+			<div className="logo-div">
+				<img src={logo} alt="meli logo" className="logo" />
+			</div>
+			<div className="link-div" />
+				<ul className="link-list">
+				{sites.map((site, key) => {
+					return (
+						<li>
+							<Link to={`/search/${site.site}`} className="link">
+								<img src={site.flag} className="country-flag" alt="country flag" />
+								{site.name}
+							</Link>
+						</li>
+					);
+				})}
+				</ul>
+		</div>
+	);
 }
 
 export default Home;

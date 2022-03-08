@@ -5,9 +5,15 @@
   align-items:center;
   margin: 2rem;
   .link-div{
+    .link-list{
+      list-style-type:none;
+    }
     .link{
       color:#2d3277;
       text-decoration: none;
+    }
+    .country-flag{
+    padding-right: 1rem;
     }
   }
 }
