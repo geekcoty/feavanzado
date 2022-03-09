@@ -1,0 +1,27 @@
+.home-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFE600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem;
+}
+
+.home-container .link-div .link-list {
+  list-style-type: none;
+}
+
+.home-container .link-div .link {
+  color: #2d3277;
+  text-decoration: none;
+}
+
+.home-container .link-div .country-flag {
+  padding-right: 1rem;
+}
+/*# sourceMappingURL=homeStyle.css.map */

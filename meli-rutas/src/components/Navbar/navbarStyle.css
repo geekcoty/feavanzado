@@ -1,0 +1,43 @@
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FFE600;
+  padding: 0.3rem;
+}
+
+.navbar-container .nav-img-div .nav-img {
+  margin-right: 1rem;
+}
+
+.navbar-container .nav-input-div {
+  background-color: white;
+  width: 45rem;
+}
+
+.navbar-container .nav-input-div .nav-input {
+  background-color: white;
+  border: 0px;
+  width: 40rem;
+  height: 2.14rem;
+}
+
+.navbar-container .nav-input-div .nav-button {
+  padding-left: 2rem;
+  color: grey;
+}
+
+.navbar-container .nav-link-div {
+  margin-left: 0.5rem;
+}
+
+.navbar-container .nav-link-div .nav-link {
+  text-decoration: none;
+}
+/*# sourceMappingURL=navbarStyle.css.map */

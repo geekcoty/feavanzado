@@ -1,0 +1,20 @@
+.content-container {
+  background-color: #ededed;
+  height: 100vh;
+  display: flexb;
+}
+
+.content-container .content-title {
+  padding: 1rem;
+  position: relative;
+  top: 15px;
+}
+
+.content-container .content-subtitle {
+  font-size: 0.7rem;
+  color: #057e05;
+  position: relative;
+  top: 15px;
+  left: -12px;
+}
+/*# sourceMappingURL=contentStyles.css.map */

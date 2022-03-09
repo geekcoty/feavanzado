@@ -4,11 +4,7 @@ import RepoContext from "../../context/RepoContext"
 
 function Projects(props){
   const repos = useContext(RepoContext)
- 
   const {avatar, bio} = props;
-
-
-
   return(
     <>
       <div className="projects-container">
@@ -24,26 +20,7 @@ function Projects(props){
         return <Project data={project} key={key}/>
       }
       )}
-
-
-
-
-
-
-      </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</ul>
         </div>
       </div>
 

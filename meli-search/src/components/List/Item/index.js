@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 function Item(props) {
 
   // las props vienen del comp List 
