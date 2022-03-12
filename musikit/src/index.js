@@ -2,17 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Agregar from "./pages/Agregar"
-import Home from "./pages/Home"
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router,Route} from "react-router-dom";
 
 ReactDOM.render(
-  <Router>
-    <Route exact path="/" component={App} />
-    <Route exact path="/agregar" component={Agregar} />
-     <Route exact path="/home" component={Home} />
-  </Router>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

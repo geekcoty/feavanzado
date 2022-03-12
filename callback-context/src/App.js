@@ -12,11 +12,13 @@ function App() {
       setTheme("light")
     }
   }
+  // valor del themeProvider
   const themeContextData= {
     theme,
     handleTheme
 
   }
+  
   return (
     <ThemeProvider value={themeContextData}>
 

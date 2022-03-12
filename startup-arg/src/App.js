@@ -1,26 +1,20 @@
-import {FieldProvider} from "./context/FieldContext"
-import {useState} from "react"
 import Nav from "./components/Nav"
-import Content from "./components/Content"
+import List from "./components/List"
+
+import { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState("")
+  const [search, setSearch] = useState("");
 
-  function handleValue(paramInput){
-    setValue(paramInput)
-    console.log(paramInput)
+  function handleCallback(value) {
+    setSearch(value);
   }
-  const fieldData = {
-    value,
-    handleValue
-  }
+
   return (
-    <div className="App">
-      <FieldProvider value={fieldData}>
-      <Nav/>
-      <Content/>
-      </FieldProvider>
-    </div>
+    <>
+      <Nav onChange={handleCallback} />
+      <List filter={search} />
+    </>
   );
 }
 

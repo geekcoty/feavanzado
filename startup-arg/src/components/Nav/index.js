@@ -1,12 +1,14 @@
-import Autocomplete from "../Nav/Autocomplete"
+import Search from "./Search"
+function Nav(props) {
+  function handleCallback(value) {
+    props.onChange(value);
+  }
 
-function Nav() {
   return (
-    <>
-    <p> soy el comp Nav</p>
-    <Autocomplete/>
-    </>
-  )
+    <nav>
+      <Search onChange={handleCallback} />
+    </nav>
+  );
 }
 
 export default Nav
