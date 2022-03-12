@@ -26,6 +26,12 @@ function Home() {
   console.log(getter)
   return(
     <>
+
+    {getter.map((startup,key) => {
+      return (<div key={key}>
+        <p>{startup.name}</p>
+      </div> )
+    })}
   <Link to="/agregar"> Agregar Startup</Link>
 
   <input onChange={(e) => setInputValue(e.target.value)} type="text"/>
