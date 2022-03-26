@@ -11,7 +11,7 @@ export const reducer = (state = initialState, action) => {
     //agregamos la acción al reducer
     case "ADD_COUNTER":
       return{
-        ...initialState,
+        ...state,
         counter: state.counter + 1
       }
 
